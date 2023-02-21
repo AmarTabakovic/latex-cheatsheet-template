@@ -1,0 +1,84 @@
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[final]{pdfpages}
+\usepackage{stmaryrd}
+\usepackage{listings}
+\usepackage[hidelinks]{hyperref}
+\usepackage[english]{babel}
+\usepackage{color}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{url}
+\usepackage{sectsty}
+\usepackage{etoolbox}
+\usepackage{multicol}
+\usepackage{wrapfig}
+\usepackage{microtype}
+\usepackage[top=1mm,bottom=1mm,left=1mm,right=1mm]{geometry}
+\usepackage{tikz}
+\usepackage[framemethod=tikz]{mdframed}
+\usepackage[font=scriptsize]{caption}
+\usepackage[compact]{titlesec}
+
+% Graphics and images
+\graphicspath{{./images/}}
+
+% Header size
+\sectionfont{\fontsize{13}{0}\sffamily}
+\subsectionfont{\fontsize{11}{0}\sffamily}
+\subsubsectionfont{\fontsize{9}{0}\sffamily}
+
+% Defining colors for syntax highlighting
+\definecolor{commentsColor}{rgb}{0.497495, 0.497587, 0.497464}
+\definecolor{keywordsColor}{rgb}{0.000000, 0.000000, 0.635294}
+\definecolor{stringColor}{rgb}{0.558215, 0.000000, 0.135316}
+
+% Other colors
+\definecolor{myblue}{RGB}{15, 30, 86}
+
+% Source: https://denbeke.be/blog/programming/syntax-highlighting-in-latex/
+\lstset{
+  backgroundcolor=\color{white},
+  basicstyle=\ttfamily\tiny, % or \footnotesize
+  breakatwhitespace=false,
+  breaklines=false,
+  commentstyle=\color{commentsColor}\textit,
+  deletekeywords={...},
+  escapeinside={\%*}{*)},
+  extendedchars=true,
+  frame=none,
+  keepspaces=true,
+  keywordstyle=\color{keywordsColor}\bfseries,
+  otherkeywords={*,...},
+  numbersep=5pt,
+  numberstyle=\tiny\color{commentsColor}, 
+  rulecolor=\color{black}, 
+  showspaces=false,
+  showstringspaces=false,
+  showtabs=false, 
+  stepnumber=1, 
+  stringstyle=\color{stringColor},
+  tabsize=2, 
+  columns=fixed,
+  aboveskip=2pt,
+  belowskip=2pt
+}
+
+% Hyperlinks
+\hypersetup{
+  colorlinks=true,
+  allcolors=black
+}
+
+% Source: https://github.com/kenfehling/latex-cheatsheet
+\pgfdeclarelayer{background}
+\pgfsetlayers{background,main}
+
+\renewcommand{\baselinestretch}{.8}
+\pagestyle{empty}
+
+\makeatother
+\setlength{\parindent}{0pt}
